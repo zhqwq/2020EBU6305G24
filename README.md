@@ -1,2 +1,15 @@
-# 2020EBU6305G24
-Interactive website coursework in EBU6305
+# EBU6305
+Group Number: 2020EBU6305G**
+Project Title: XXXXXXXXXXXXXXXX
+Members:
+Name, BUPT Student Number, QM Student Number, Email
+
+Name, BUPT Student Number, QM Student Number, Email
+
+Name, BUPT Student Number, QM Student Number, Email
+
+Name, BUPT Student Number, QM Student Number, Email
+
+Name, BUPT Student Number, QM Student Number, Email
+
+Assigned TA: XXXXXXX
