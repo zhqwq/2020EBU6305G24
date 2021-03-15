@@ -8,7 +8,7 @@
 
 * Zhang Kaiwei, 2018212778, 190013482, 864591434@qq.com
 
-* Name, BUPT Student Number, QM Student Number, Email
+* Zhang Zechen, 2018212765, 190015525, 15910871759@163.com
 
 * Name, BUPT Student Number, QM Student Number, Email
 
