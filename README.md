@@ -10,7 +10,7 @@
 
 * Zhang Zechen, 2018212765, 190015525, 15910871759@163.com
 
-* Name, BUPT Student Number, QM Student Number, Email
+* Ding Chuyan, 2018212777, 190012762, 1577827388@qq.com
 
 * Name, BUPT Student Number, QM Student Number, Email
 
