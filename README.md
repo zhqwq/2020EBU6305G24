@@ -1,8 +1,8 @@
-# 👋EBU6305
+# 👋EBU6305 Interactive Media Design
 
 ## Group Number: 2020EBU6305G24
 
-## Project Title: XXXXXXXXXXXXXXXX
+## Project Title: Chinese Geographic Web 
 
 ## Members:
 
