@@ -14,6 +14,6 @@
 
 * Tan Hongjin, 2018212763, 190013105, sammythj@163.com
 
-* Name, BUPT Student Number, QM Student Number, Email
+* Liu Jingyuan, 2018212645,  190013389, 873906860@qq.com
 
-## Assigned TA: XXXXXXX
+
