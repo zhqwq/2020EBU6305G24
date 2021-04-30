@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Homepage</title>
+		<style>
+			body {
+				margin: 0;
+				padding: 0;
+				background: #000000;
+			}
+			.dropbtn1 {
+				background-color: #757575;
+				color: #fff;
+				padding: 16px;
+				font-size: 16px;
+				border: none;
+			}
+			.dropbtn2 {
+				position: relative;
+				left: 70px;
+				background-color: #757575;
+				color: #fff;
+				padding: 16px;
+				font-size: 16px;
+				border: none;
+			}
+			.dropdown {
+				position: relative;
+				top: 75px;
+				left: 30px;
+				display: inline-block;
+			}
+			.dropdown-content {
+				/* 隐藏元素 */
+				display: none;
+				position: absolute;
+				background-color: #f9f9f9;
+				min-width: 160px;
+				box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+			}
+			.dropdown-content a {
+				color: black;
+				padding: 12px 16px;
+				text-decoration: none;
+				display: block;
+			}
+			.dropdown-content a:hover {
+				background-color: #f1f1f1
+			}
+			/* .dropdown的hover效果，作用在.dropdown-content上 */
+			.dropdown:hover .dropdown-content {
+				display: block;
+			}
+			.dropdown:hover .dropbtn {
+				background-color: #3dc741;
+			}
+
+			.logo {
+				position: absolute;
+				top: -3%;
+				left: 2%;
+				color: white;
+				font-size: 30px;
+			}
+			.search-box {
+				position: absolute;
+				top: 10%;
+				left: 70%;
+				width: 220px;
+				background: #ffffff;
+				height: 30px;
+				border-radius: 30px;
+				padding: 5px;
+			}
+			.search-btn {
+				color: #000000;
+				float: right;
+				width: 30px;
+				height: 30px;
+				border-radius: 100%;
+				background: #ffffff;
+			}
+			.search-txt {
+				border: none;
+				background: none;
+				outline: none;
+				float: left;
+				padding: 0;
+				color: rgb(0, 0, 0);
+				font-size: 14px;
+				line-height: 30px;
+				width: 0;
+			}
+			.search-box:hover > .search-txt {
+				width: 120px;
+				padding: 0 10px;
+				outline:none;
+			}
+
+			.picture {
+				position: absolute;
+				top: 20%;
+				left: 27%;
+				width: 500px;
+				height: 333px;
+				margin: 0 auto;
+				border: 2px solid rgb(255, 255, 255);
+				overflow: hidden;
+        	}
+        	.radius {
+				width: 100%;
+				height: 10px;
+				position: absolute;
+				bottom: 30px;
+				text-align: center;
+        	}
+       	 	.pg {         
+				position: absolute;
+				margin: 0;
+				width: 100%;
+				height: 20px;
+				background-color: rgba(0, 0, 0, 0.4);
+				text-align: center;
+				font-size: 16px;
+				font-weight: 600;
+				color: rgb(255, 255, 255);
+        	}
+        	.title {
+				position: absolute;
+				width: 100%;
+				bottom: 0px;
+				text-align: center;
+				font-size: 16px;
+				font-weight: 600;
+				color: rgb(255, 255, 255);
+        	}
+        	span {
+				display: inline-block;
+				border: 10px solid #fdfdfd;
+				border-radius: 50%;
+        	}
+        	.active {
+            	border: 10px solid #ffffff;
+        	}
+        	/* 左右箭头  */
+        	.arrowhead-left,.arrowhead-right {
+            	position: absolute;
+            	width: 40px;
+            	height: 60px;
+            	font-size: 30px;
+            	line-height: 70px;
+            	text-align: center;
+            	color: #D6D8D4;
+            	background-color: rgba(231, 225, 225, 0.781);
+        	}
+        	.arrowhead-left {
+            	left: 0;
+            	top: 40%;
+        	}
+        	.arrowhead-right {
+            	right: 0;
+            	top: 40%;
+        	}
+
+			.type-btn {
+				position: absolute;
+				top: 70%;
+				left: 25%;
+				color: rgb(0, 0, 0);
+				font-size: 15px;
+			}
+			.cost-btn {
+				position: absolute;
+				top: 70%;
+				left: 45%;
+				color: rgb(0, 0, 0);
+				font-size: 15px;
+			}
+			.transport-btn {
+				position: absolute;
+				top: 70%;
+				left: 65%;
+				color: rgb(0, 0, 0);
+				font-size: 15px;
+			}
+		</style>
+
+		<script>
+			function getValue()
+			{
+				var val = document.getElementById("searchContent");
+				alert(val.value);
+			}
+
+			var address = ["d1.jpeg", "d2.jpeg", "d3.jpeg", "d4.jpeg", "d5.jpeg"];
+			//  var imgs = document.getElementsByTagName("img");
+			var imgs = document.querySelector("img");
+			var len = address.length;
+			var str = "";
+			var pp = document.getElementsByTagName("p");//获取的是一个集合
+			//  var pp  = document.querySelector("p");    //获取的是一个元素
+			var al = document.getElementById("al");
+			var ar = document.getElementById("ar");
+			//添加span标签
+			for (i = 0; i < len; i++) {
+				str += ' <span></span>'
+			}
+			console.log(str);
+			console.log(pp);
+			pp[1].innerHTML = str;
+			var spans = pp[1].getElementsByTagName('span');
+			spans[0].className = 'active';
+
+			for (i = 0; i < len; i++) {
+				spans[i].index = i;
+				spans[i].onmouseover = function () {    //所有圆点的类为空
+					for (i = 0; i < len; i++) {
+						spans[i].className = "";
+					}
+					this.className = 'active';           //给点击的span（圆点）添加类名
+					imgs.src = address[this.index];    
+					pp[0].innerHTML = [this.index + 1] + "/6";
+					pp[2].innerHTML = "风光" + [this.index + 1];
+
+				}
+			}
+        var n = 0 ;
+        ar.onclick = function () {
+
+           for (i = 0; i < len; i++) {
+                spans[i].className = "";
+            }
+
+            spans[n].className = "active";
+            imgs.src = address[n];
+            pp[0].innerHTML = (n+1) + "/5";
+            pp[2].innerHTML = "风光" +(n+1);
+            if (n<5) {
+               n++; 
+           }
+            else {
+             n=0;
+           }
+        }
+        al.onclick = function () {
+
+         for (i = 0; i < len; i++) {
+              spans[i].className = "";
+          }
+         
+          spans[n].className = "active";
+          imgs.src = address[n];
+          pp[0].innerHTML = (n+1) + "/5";
+          pp[2].innerHTML = "风光" +(n+1);
+          if (n>0) {
+             n--; 
+         }
+          else {}
+           n=(len-1);
+        }
+		</script>
+	</head>
+
+	<body>
+		<div class="logo">
+			<p>TripHere</p>
+		</div>
+		<div class="menubar">
+			<div class="dropdown">
+				<button class="dropbtn1">menu1</button>
+				<div class="dropdown-content">
+					<a href="#" target="_block">item1</a>
+					<a href="#" target="_block">item2</a>
+					<a href="#" target="_block">item3</a>
+				</div>
+			</div>
+			<div class="dropdown">
+				<button class="dropbtn2">menu2</button>
+				<div class="dropdown-content">
+					<a href="#" target="_block">item1</a>
+					<a href="#" target="_block">item2</a>
+					<a href="#" target="_block">item3</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="search-box">
+			<input class="search-txt" type="text" placeholder="Type to search" id="searchContent"/>
+			<button class="search-btn" id="button1" onclick="getValue()">Go</button>
+		</div>
+
+		<div class="picture">
+			<!-- 图片页码 -->
+			<p class="pg">cover</p>
+			<img src="d6.jpeg" alt="">
+	
+			<!-- 小圆点点 -->
+			<p class="radius"></p>
+			<!-- 图片的下面标题 -->
+			<p class="title">headline</p>
+	
+			<!-- 左右箭头 -->
+			<div class="arrowhead-left" id="al"> < </div> 
+			<div class="arrowhead-right" id="ar"> > </div>
+		</div>
+
+		<div>
+			<button class="type-btn">Type</button>
+			<button class="cost-btn">Cost</button>
+			<button class="transport-btn">Transportation</button>
+		</div>
+	</body>
+</html>
