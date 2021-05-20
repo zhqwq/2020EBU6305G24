@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Search</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #ddd;
+        }
+
+        div.header {
+            background: url(../img/luzhu.jpg) center/80%;
+
+        }
+
+        ul#menu {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        ul#menu li {
+            float: right;
+            border-right: 1px solid;
+        }
+
+        ul#menu li a {
+            display: block;
+            padding: 5px 10px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 12px;
+            color: white;
+        }
+
+        div.search-container {
+            float: right;
+            padding-top: 50px;
+        }
+
+        div.search-container input {
+            padding: 6px;
+            margin-top: 8px;
+            font-size: 17px;
+            border: black solid;
+        }
+
+        div.search-container button {
+            padding: 7px;
+            margin-top: 8px;
+            margin-right: 30px;
+            background: #ddd;
+            font-size: 16px;
+            border: solid;
+        }
+
+        div.search-container button:hover {
+            background-color: #ccc;
+        }
+
+        ul#nav {
+            list-style-type: none;
+            margin: 0;
+
+            padding: 0;
+            border: solid black 2px;
+            background-color: black;
+            overflow: hidden;
+        }
+
+        ul#nav li {
+            float: left;
+        }
+
+        ul#nav li a {
+            display: block;
+            color: white;
+            font-weight: 500;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        ul#nav li a:hover {
+            background-color: #ddd;
+        }
+
+       .icon{
+            width: 300px;
+            float:right;       
+       }
+
+       .text{
+           float: left;
+            width: 700px;
+            margin: 0 auto;
+            background-color: aqua;
+       }
+
+       .text p{
+           font-size: 20px;
+       }
+       
+       .text img{
+           margin: 10px 50px;
+           width: 600px;
+       }
+
+        .box{
+           width: 60px;
+           height: 120px;
+           float: right;
+           
+       }
+       
+       .box button{
+           width: 50px;
+           height: 50px;
+       }
+       
+       .box button:active{
+            box-shadow: 0 5px #666;
+            transform: translateY(4px);
+        }
+
+        .box button:focus{
+            outline:none;
+        }
+       .main{
+            margin-left: 250px;
+            margin-right: 150px;
+       }
+       .main{
+            margin-left: 250px;
+            margin-right: 150px;
+       }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <ul id="menu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+        </ul>
+        <a href="../Home.html"><img id="logo" src="../img/logo.png" alt="Logo"></a>
+        <div class="search-container">
+            <form action="/action_page.php">
+                <input type="text" placeholder="Search" name="search">
+                <button type="submit">Search it!</button>
+            </form>
+        </div>
+    </div>
+
+
+    <div class="navigation">
+        <ul id="nav">
+            <li><a href="../ListPage.html">List</a></li>
+            <li><a href="../About.html">About</a></li>
+        </ul>
+    </div>
+    <br>
+    <div class="main">
+        
+        <div class="text">
+        <h1>East Lake, Wuhan</h1>
+        <div class="img"> <img src = "../img/donghu.png"> </div>
+<p>
+Wuhan East Lake is a tourist attraction with a large natural lake as the core, the lake and
+mountains as the characteristics, set tourism and sightseeing, leisure and holiday, science
+education as the main function, receiving millions of tourists at home and abroad every year,
+is the largest scenic excursion in central China, was the largest city lake in China before 2014,
+in 2014 due to the expansion of Wuhan central city, East Lake relegated to the Jiangxia District
+of Wuhan City after the Townsend Lake, is The second largest city lake in China.<br/>
+<br/>
+</p>
+
+<p>
+Named after its location in the eastern part of Wuchang in Wuhan, Hubei Province, East Lake
+is now one of the most extensive city lakes in China, with a water area of 33 square kilometres,
+six times that of West Lake in Hangzhou. Located on the southern bank of the Yangtze River,
+it was formed by the silting up of the Yangtze River and was connected to other lakes in
+Wuchang and to the Yangtze River more than 100 years ago and was subject to frequent
+flooding. With manual intervention, the East Lake and its surrounding lakes have since been
+separated from the Yangtze River.<br/>
+<br/>
+</p>
+
+<p>
+The Wuhan East Lake Scenic Area is located between Wuhan's second and third ring roads in
+the urban area of Wuhan. The scenic area covers 73 square kilometres, of which the lake
+covers 33 square kilometres, making it the second largest city lake in China. Together with
+the land scenic area along the lake, it covers an area of more than 80 square kilometres. The
+winding shores of the lake, with its interlocking harbours and branches, are known as the
+Ninety-Nine Bays. There are more than 100 scenic spots, 12 large and small lakes, more than
+120 islands, 112 km of winding shoreline, 34 peaks around the lake, and more than 10,000
+mu of mountain forests.<br/>
+<br/>
+</p>
+        </div>
+        <div class="icon"><img src="../img/icon.png" alt=""><div>I am zzc, a hiker. This is the first passage of mine about the national geographic of China.</div></div>
+        <div class = "box">
+        <button onclick="buttonPressed()"style="background-image:url(../img/dianzan.png);background-color: ;border: none; background-size:contain;" type="button"id="dianzan"></button>
+        <div class = "dz" id = "like">  </div>
+        
+        </div>
+
+    </div>
+    <script>
+        var num = 0;
+        function buttonPressed() {
+            num += 1;
+            document.getElementById("like").innerHTML = num;
+        }
+    </script>
+</body>
+
+</html>

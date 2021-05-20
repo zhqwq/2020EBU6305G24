@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Search</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #ddd;
+        }
+
+        div.header {
+            background: url(../img/luzhu.jpg) center/80%;
+
+        }
+
+        ul#menu {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        ul#menu li {
+            float: right;
+            border-right: 1px solid;
+        }
+
+        ul#menu li a {
+            display: block;
+            padding: 5px 10px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 12px;
+            color: white;
+        }
+
+        div.search-container {
+            float: right;
+            padding-top: 50px;
+        }
+
+        div.search-container input {
+            padding: 6px;
+            margin-top: 8px;
+            font-size: 17px;
+            border: black solid;
+        }
+
+        div.search-container button {
+            padding: 7px;
+            margin-top: 8px;
+            margin-right: 30px;
+            background: #ddd;
+            font-size: 16px;
+            border: solid;
+        }
+
+        div.search-container button:hover {
+            background-color: #ccc;
+        }
+
+        ul#nav {
+            list-style-type: none;
+            margin: 0;
+
+            padding: 0;
+            border: solid black 2px;
+            background-color: black;
+            overflow: hidden;
+        }
+
+        ul#nav li {
+            float: left;
+        }
+
+        ul#nav li a {
+            display: block;
+            color: white;
+            font-weight: 500;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        ul#nav li a:hover {
+            background-color: #ddd;
+        }
+
+       .icon{
+            width: 300px;
+            float:right;       
+       }
+
+       .text{
+           float: left;
+            width: 700px;
+            margin: 0 auto;
+            background-color: aqua;
+       }
+
+       .text p{
+           font-size: 20px;
+       }
+       
+       .text img{
+           margin: 10px 50px;
+           width: 600px;
+       }
+
+       .box{
+           width: 60px;
+           height: 120px;
+           float: right;
+           
+       }
+       
+       .box button{
+           width: 50px;
+           height: 50px;
+       }
+       
+       .box button:active{
+            box-shadow: 0 5px #666;
+            transform: translateY(4px);
+        }
+
+        .box button:focus{
+            outline:none;
+        }
+       .main{
+            margin-left: 250px;
+            margin-right: 150px;
+       }
+
+       .main{
+            margin-left: 250px;
+            margin-right: 150px;
+       }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <ul id="menu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+        </ul>
+        <a href="../Home.html"><img id="logo" src="../img/logo.png" alt="Logo"></a>
+        <div class="search-container">
+            <form action="/action_page.php">
+                <input type="text" placeholder="Search" name="search">
+                <button type="submit">Search it!</button>
+            </form>
+        </div>
+    </div>
+
+
+    <div class="navigation">
+        <ul id="nav">
+            <li><a href="#home">Destinations</a></li>
+            <li><a href="#news">Types</a></li>
+            <li><a href="#contact">Transpotations</a></li>
+            <li><a href="#about">About</a></li>
+        </ul>
+    </div>
+    <br>
+    <div class="main">
+        
+        <div class="text">
+        <h1>Beijing Palace Museum</h1>
+        <div class="img"> <img src = "../img/gugong.png">  </div>
+<p>
+The Palace Museum, also known as the "Forbidden City", was built in 1406. As the imperial palace
+of Ming and Qing Dynasties, 24 emperors ascended to the throne one after another. The overall
+architecture of the Forbidden City is magnificent, magnificent, solemn and harmonious, no matter
+in terms of spatial layout or appearance. It is an unparalleled masterpiece in ancient Chinese
+architecture. Combined with the architectural history of the Forbidden City in Beijing, this book
+shows the palace, pavilions, porches and other architectural styles, as well as the interior, decoration,
+furnishings and other related facilities of the Forbidden City, and explains the construction
+techniques, construction methods and other related knowledge of the Forbidden City, so as to
+interpret this large-scale royal building complex in an intuitive and concise way.<br/>
+<br/>
+</p>
+
+<p>
+The Forbidden City, also known as the Forbidden City, is located in the center of Beijing. Today
+people call it the Forbidden City, which means the imperial palace of the past. The Forbidden City
+is 750 meters wide from east to west and 960 meters long from north to south, with an area of
+720000 square meters, the largest in the world; The whole building of the Palace Museum is
+surrounded by two solid lines of defense in the middle, surrounded by a moat 52 meters wide and 6
+meters deep; Then there is the 3-kilometer-long city wall, which is nearly 10 meters high and 8.62
+meters wide at the bottom. There are four gates on the wall, including Meridian Gate in the south,
+Shenwu gate in the north, Donghua gate in the East and Xihua gate in the West. There are four
+turrets at the four corners of the wall. The turrets have three eaves and 72 ridges. They are exquisite
+and unique in shape. They are Masterpieces of ancient Chinese architecture.
+</p>
+</div>
+        <div class="icon"><img src="../img/icon.png" alt=""><div>I am zzc, a hiker. This is the first passage of mine about the national geographic of China.</div></div>
+        <div class = "box">
+        <button onclick="buttonPressed()"style="background-image:url(../img/dianzan.png);background-color: ;border: none; background-size:contain;" type="button"id="dianzan"></button>
+        <div class = "dz" id = "like">  </div>
+        
+        </div>
+
+    </div>
+    <script>
+        var num = 0;
+        function buttonPressed() {
+            num += 1;
+            document.getElementById("like").innerHTML = num;
+        }
+    </script>
+</body>
+
+</html>

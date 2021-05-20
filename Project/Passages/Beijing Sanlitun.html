@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Search</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #ddd;
+        }
+
+        div.header {
+            background: url(../img/luzhu.jpg) center/80%;
+
+        }
+
+        ul#menu {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        ul#menu li {
+            float: right;
+            border-right: 1px solid;
+        }
+
+        ul#menu li a {
+            display: block;
+            padding: 5px 10px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 12px;
+            color: white;
+        }
+
+        div.search-container {
+            float: right;
+            padding-top: 50px;
+        }
+
+        div.search-container input {
+            padding: 6px;
+            margin-top: 8px;
+            font-size: 17px;
+            border: black solid;
+        }
+
+        div.search-container button {
+            padding: 7px;
+            margin-top: 8px;
+            margin-right: 30px;
+            background: #ddd;
+            font-size: 16px;
+            border: solid;
+        }
+
+        div.search-container button:hover {
+            background-color: #ccc;
+        }
+
+        ul#nav {
+            list-style-type: none;
+            margin: 0;
+
+            padding: 0;
+            border: solid black 2px;
+            background-color: black;
+            overflow: hidden;
+        }
+
+        ul#nav li {
+            float: left;
+        }
+
+        ul#nav li a {
+            display: block;
+            color: white;
+            font-weight: 500;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        ul#nav li a:hover {
+            background-color: #ddd;
+        }
+
+       .icon{
+            width: 300px;
+            float:right;       
+       }
+
+       .text{
+           float: left;
+            width: 700px;
+            margin: 0 auto;
+            background-color: aqua;
+       }
+
+       .text p{
+           font-size: 20px;
+       }
+       
+       .text img{
+           margin: 10px 50px;
+           width: 600px;
+       }
+
+        .box{
+           width: 60px;
+           height: 120px;
+           float: right;
+           
+       }
+       
+       .box button{
+           width: 50px;
+           height: 50px;
+       }
+       
+       .box button:active{
+            box-shadow: 0 5px #666;
+            transform: translateY(4px);
+        }
+
+        .box button:focus{
+            outline:none;
+        }
+       .main{
+            margin-left: 250px;
+            margin-right: 150px;
+       }
+       .main{
+            margin-left: 250px;
+            margin-right: 150px;
+       }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <ul id="menu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+        </ul>
+        <a href="../Home.html"><img id="logo" src="../img/logo.png" alt="Logo"></a>
+        <div class="search-container">
+            <form action="/action_page.php">
+                <input type="text" placeholder="Search" name="search">
+                <button type="submit">Search it!</button>
+            </form>
+        </div>
+    </div>
+
+
+    <div class="navigation">
+        <ul id="nav">
+            <li><a href="../ListPage.html">List</a></li>
+            <li><a href="#about">About</a></li>
+        </ul>
+    </div>
+    <br>
+    <div class="main">
+        
+        <div class="text">
+        <h1>Sanlitun, Beijing</h1>
+        <div class="img"> <img src = "../img/sanlitun.png">  </div>
+<p>
+Sanlitun is located in the east of Chaoyang District. It is three li away from the inner city. Now it is
+famous for Sanlitun Bar Street. Sanlitun Bar Street is one of the more "prosperous" entertainment
+streets in Beijing's nightlife. It is a place frequented by foreigners and domestic celebrities living in
+Beijing. The Ming and Qing Dynasties belonged to Daxing County of shuntianfu. As a film title, it
+generally refers to the area surrounded by Zuojiazhuang, Chaowai Street, Hujialou and Maizidian.
+In 1962, the North embassy area was built in the region. From 1960s to 1970s, the diplomatic
+apartment group was built. Sanlitun area gradually developed into an important community for
+diplomats in China to live, shop and foreign affairs activities.<br/>
+<br/>
+</p>
+
+<p>
+There are 10 vertical and 12 horizontal streets in the area. Xindong road and worker's Stadium East
+Road are part of the capital's former Yingbin Road. Sanlitun Bar Street is one of the main places of
+nightlife in Beijing. There are Tayuan diplomatic staff apartment, Yansha friendship mall, foreign
+exchange duty-free shop, China International store, 3.3 clothing building and other units in the area.
+There are City Hotel, Zhaolong Hotel and Qilin building on both sides of the east section of worker's
+Stadium North Road. Sanlitun has Sanlitun Dongli in the East and Sanlitun Nanli in the south. The
+northwest of the village is the happy three villages.<br/>
+<br/>
+</p>
+</div>
+        <div class="icon"><img src="../img/icon.png" alt=""><div>I am zzc, a hiker. This is the first passage of mine about the national geographic of China.</div></div>
+        <div class = "box">
+        <button onclick="buttonPressed()"style="background-image:url(../img/dianzan.png);background-color: ;border: none; background-size:contain;" type="button"id="dianzan"></button>
+        <div class = "dz" id = "like">  </div>
+        
+        </div>
+
+    </div>
+    <script>
+        var num = 0;
+        function buttonPressed() {
+            num += 1;
+            document.getElementById("like").innerHTML = num;
+        }
+    </script>
+</body>
+
+</html>

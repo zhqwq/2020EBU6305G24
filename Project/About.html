@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Home</title>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "PingFang SC", "Microsoft Yahei";
+            box-sizing: border-box;
+            background-color: #ddd;
+        }
+
+        div.header {
+            background: url(./img/luzhu.jpg) center/80%;
+
+        }
+
+        ul#menu {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        ul#menu li {
+            float: right;
+            border-right: 1px solid;
+        }
+
+        ul#menu li a {
+            display: block;
+            padding: 5px 10px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 12px;
+            color: white;
+        }
+
+        div.search-container {
+            float: right;
+            padding-top: 50px;
+        }
+
+        div.search-container input {
+            padding: 6px;
+            margin-top: 8px;
+            font-size: 17px;
+            border: black solid;
+        }
+
+        div.search-container button {
+            padding: 7px;
+            margin-top: 8px;
+            margin-right: 30px;
+            background: #ddd;
+            font-size: 16px;
+            border: solid;
+        }
+
+        div.search-container button:hover {
+            background-color: #ccc;
+        }
+
+        ul#nav {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            border: solid black 2px;
+            background-color: black;
+            overflow: hidden;
+        }
+
+        ul#nav li {
+            float: left;
+
+        }
+
+        ul#nav li a {
+            display: block;
+            color: white;
+            font-weight: 500;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        ul#nav li a:hover {
+            background-color: #ddd;
+        }
+
+        .dropdown {
+            display: inline-block;
+            /* .dropdown出现在最后是因为其它块浮动脱离了标准流，但仍占据着空间 */
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: black;
+            min-width: 129px;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .content img {
+            width: 400px;
+            height: 200px;
+
+        }
+
+        .content {
+            float: left;
+            margin: 25px 20px;
+        }
+
+        .content a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .text {
+            width: 400px;
+            height: 50px;
+            text-align: center;
+            margin: 5px 5px;
+        }
+
+        #class {
+            margin-left: 20px;
+        }
+
+        .info {
+            width: 100vw;
+            height: 100vh;
+            text-align: center;
+            padding-top: 300px;
+            background: linear-gradient(135deg,hsl(180deg,80%,70%),hsl(230deg,80%,70%),hsl(250deg,80%,70%),hsl(320deg,80%,70%));
+            background-size: 200% 200%;
+            animation: gradient-move 10s infinite;
+        }
+
+        @keyframes gradient-move {
+                0% {
+                    background-position:0% 50%;
+                }
+                50% {
+                    background-position: 100% 50%;
+                }
+                100% {
+                    background-position:0% 50%;
+                }
+            }
+
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <ul id="menu">
+            <li><a href="./Home.html">Home</a></li>
+            <li><a href="./About.html">About</a></li>
+        </ul>
+        <a href="./ListPage.html"><img id="logo" src="./img/logo.png" alt="Logo"></a>
+        <div class="search-container">
+            <form action="/action_page.php">
+                <input type="text" placeholder="Search" name="search">
+                <button type="submit">Search it!</button>
+            </form>
+        </div>
+    </div>
+
+
+    <div class="navigation">
+        <ul id="nav">
+            <li>
+                <div class="dropdown">
+                    <a href="./ListPage.html" class="dropbt">List</a>
+                </div>
+            </li>
+            <li><a href="./About.html">About</a></li>
+        </ul>
+    </div>
+
+
+    
+    <div class="main">
+        <div class="info"><h1>Hello, Future!</h1><h3>This is a brief introduction of ourselves.</h3></div>
+    </div>
+
+
+</body>
+
+</html>
