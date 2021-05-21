@@ -151,9 +151,9 @@
         </ul>
         <a href="./Home.html"><img id="logo" src="./img/logo.png" alt="Logo"></a>
         <div class="search-container">
-            <form action="/action_page.php">
+            <form action="./ListPage.html">
                 <input type="text" placeholder="Search" name="search">
-                <button type="submit">Search it!</button>
+                <button>Search it!</button>
             </form>
         </div>
     </div>
@@ -165,9 +165,9 @@
                 <div class="dropdown">
                     <a href="#" class="dropbt">Destinations</a>
                     <div class="dropdown-content">
-                        <a href="#" id="slt" onclick="myFunction(this.id)">三里屯</a>
-                        <a href="#" id="jzz" onclick="myFunction(this.id)">橘子洲</a>
-                        <a href="#" id="hhl" onclick="myFunction(this.id)">黄鹤楼</a>
+                        <a href="#" id="bj" onclick="myFunction(this.id)">Beijing</a>
+                        <a href="#" id="cs" onclick="myFunction(this.id)">Chang Sha</a>
+                        <a href="#" id="wh" onclick="myFunction(this.id)">Wu Han</a>
                     </div>
                 </div>
             </li>
@@ -177,26 +177,46 @@
 
     <script>
         function myFunction(id) {
-            if (id == "slt") {
-                document.getElementById("class").innerHTML = "<h1>三里屯</h1>";
+            if (id == "bj") {
+                document.getElementById("class").innerHTML = "<h1>Beijing</h1>";
                 var content = document.getElementById("content");
                 content.innerHTML = `<div class="content"><a href="https://www.thepaper.cn/newsDetail_forward_12709136" target="_blank"><img
-                        src="./img/三里屯.png" alt="">
+                        src="./img/sanlitun.png" alt="">
                     <div class="text">三里屯酒吧街是北京夜生活最“繁华”的娱乐街之一。</div>
+                </a></div> <div class="content"><a href="./Passages/Beijing Wukesong.html"
+                    target="_blank" rel="noopener noreferrer"><img src="./img/wukesong.png" alt="">
+                    <div class="text">五棵松:北京凯迪拉克中心</div>
+                </a></div>
+
+            <div class="content"><a href="./Passages/Beijing Old Summer Palace.html" target="_blank" rel="noopener noreferrer"><img src="./img/yuanmingyuan.png"
+                        alt="">
+                    <div class="text">圆明园:英法联军洗劫并烧毁,故址现为圆明园遗址公园。</div>
+                </a></div>
+            <div class="content"><a href="./Passages/Beijing Palace Museum.html" target="_blank" rel="noopener noreferrer"><img src="./img/gugong.png"
+                        alt="">
+                    <div class="text">故宫：紫禁城，是中国人心中最神圣的一个梦。</div>
                 </a></div>`;
-            }else if(id =="jzz"){
-                document.getElementById("class").innerHTML = "<h1>橘子洲</h1>";
+            } else if (id == "cs") {
+                document.getElementById("class").innerHTML = "<h1>Chang Sha</h1>";
                 var content = document.getElementById("content");
-                content.innerHTML = `<div class="content"><a href="http://" target="_blank"><img src="./img/橘子洲.png"
+                content.innerHTML = `<div class="content"><a href="http://" target="_blank"><img src="./img/juzizhou.png"
                         alt="">
                     <div class="text">橘子洲：独立寒秋，湘江北去，橘子洲头。</div>
+                </a></div>
+                <div class="content"><a href="./Passages/Changsha Yuelu Mountain.html" target="_blank"
+                    rel="noopener noreferrer"><img src="./img/yuelushuyuan.png" alt="">
+                    <div class="text">岳麓书院:两湖人才聚集地</div>
                 </a></div>`;
-            }else{
-                document.getElementById("class").innerHTML = "<h1>黄鹤楼</h1>";
+            } else {
+                document.getElementById("class").innerHTML = "<h1>Wu Han</h1>";
                 var content = document.getElementById("content");
-                content.innerHTML = `<div class="content"><a href="http://" target="_blank" rel="noopener noreferrer"><img src="./img/黄鹤楼.jpg"
+                content.innerHTML = `<div class="content"><a href="http://" target="_blank" rel="noopener noreferrer"><img src="./img/huanghelou.jpg"
                         alt="">
                     <div class="text">黄鹤楼:登湖北黄鹤楼 叹古今天下事</div>
+                </a></div>
+                <div class="content"><a href="./Passages/Wuhan East Lake.html" target="_blank"
+                    rel="noopener noreferrer"><img src="./img/donghu.png" alt="">
+                    <div class="text">东湖:九十九道湾</div>
                 </a></div>`;
             }
 
@@ -210,41 +230,41 @@
         </div>
         <div id="content">
             <div class="content"><a href="./Passages/Beijing Sanlitun.html" target="_blank"><img
-                        src="./img/三里屯.png" alt="">
+                        src="./img/sanlitun.png" alt="">
                     <div class="text">三里屯酒吧街是北京夜生活最“繁华”的娱乐街之一。</div>
                 </a></div>
-            <div class="content"><a href="./Passages/Wuhan East Lake.html"
-                    target="_blank" rel="noopener noreferrer"><img src="./img/东湖.png" alt="">
+            <div class="content"><a href="./Passages/Wuhan East Lake.html" target="_blank"
+                    rel="noopener noreferrer"><img src="./img/donghu.png" alt="">
                     <div class="text">东湖:九十九道湾</div>
                 </a></div>
-            <div class="content"><a href="./Passages/Beijing Wukesong.html"
-                    target="_blank" rel="noopener noreferrer"><img src="./img/五棵松.png" alt="">
+            <div class="content"><a href="./Passages/Beijing Wukesong.html" target="_blank"
+                    rel="noopener noreferrer"><img src="./img/wukesong.png" alt="">
                     <div class="text">五棵松:北京凯迪拉克中心</div>
                 </a></div>
 
-            <div class="content"><a href="./Passages/Beijing Old Summer Palace.html" target="_blank" rel="noopener noreferrer"><img src="./img/圆明园.png"
-                        alt="">
+            <div class="content"><a href="./Passages/Beijing Old Summer Palace.html" target="_blank"
+                    rel="noopener noreferrer"><img src="./img/yuanmingyuan.png" alt="">
                     <div class="text">圆明园:英法联军洗劫并烧毁,故址现为圆明园遗址公园。</div>
                 </a></div>
-            <div class="content"><a href="./Passages/Changsha Yuelu Mountain.html" target="_blank" rel="noopener noreferrer"><img src="./img/岳麓书院.png"
-                        alt="">
+            <div class="content"><a href="./Passages/Changsha Yuelu Mountain.html" target="_blank"
+                    rel="noopener noreferrer"><img src="./img/yuelushuyuan.png" alt="">
                     <div class="text">岳麓书院:两湖人才聚集地</div>
                 </a></div>
-            <div class="content"><a href="./Passages/Beijing Palace Museum.html" target="_blank" rel="noopener noreferrer"><img src="./img/故宫.png"
-                        alt="">
+            <div class="content"><a href="./Passages/Beijing Palace Museum.html" target="_blank"
+                    rel="noopener noreferrer"><img src="./img/gugong.png" alt="">
                     <div class="text">故宫：紫禁城，是中国人心中最神圣的一个梦。</div>
                 </a></div>
 
-            <div class="content"><a href="./Passages/Changsha Juzizhoutou.html" target="_blank" rel="noopener noreferrer"><img src="./img/橘子洲.png"
-                        alt="">
+            <div class="content"><a href="./Passages/Changsha Juzizhoutou.html" target="_blank"
+                    rel="noopener noreferrer"><img src="./img/juzizhou.png" alt="">
                     <div class="text">橘子洲：独立寒秋，湘江北去，橘子洲头。</div>
                 </a></div>
-            <div class="content"><a href="./Passages/Jilin Changbai Mountain.html"
-                    target="_blank" rel="noopener noreferrer"><img src="./img/长白山.png" alt="">
+            <div class="content"><a href="./Passages/Jilin Changbai Mountain.html" target="_blank"
+                    rel="noopener noreferrer"><img src="./img/changbaishan.png" alt="">
                     <div class="text">长白山：解密东北亚第一神山</div>
                 </a></div>
-            <div class="content"><a href="./Passages/Wuhan Yellow Crane Tower.html" target="_blank" rel="noopener noreferrer"><img src="./img/黄鹤楼.jpg"
-                        alt="">
+            <div class="content"><a href="./Passages/Wuhan Yellow Crane Tower.html" target="_blank"
+                    rel="noopener noreferrer"><img src="./img/huanghelou.jpg" alt="">
                     <div class="text">黄鹤楼:登湖北黄鹤楼 叹古今天下事</div>
                 </a></div>
         </div>
